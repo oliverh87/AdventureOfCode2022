@@ -1,0 +1,29 @@
+# This is a sample Python script.
+
+# Press Umschalt+F10 to execute it or replace it with your code.
+# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+
+def print_hi(name):
+    # Use a breakpoint in the code line below to debug your script.
+    print(f'Hi, {name}')  # Press Strg+F8 to toggle the breakpoint.
+
+    actual_calorien_elv = 0
+    calorien_elv_list = []
+    f = open("data", "r")
+    for x in f:
+        if x == '\n':
+            calorien_elv_list.append(int(str(actual_calorien_elv)))
+            actual_calorien_elv = 0
+        else:
+            actual_calorien_elv = actual_calorien_elv + int(str(x))
+    print(max(calorien_elv_list))
+
+
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    print_hi('PyCharm')
+
+# See PyCharm help at https://www.jetbrains.com/help/pycharm/
